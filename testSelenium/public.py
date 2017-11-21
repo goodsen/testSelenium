@@ -1,6 +1,6 @@
 class login():
     #登录
-    def user_logIn(self,driver):
+    def user_logIn(self,driver,username,password):
         driver.find_element_by_id("shortAccount").clear()
         driver.find_element_by_id("shortAccount").send_keys(username)
         driver.find_element_by_id("password").clear()
