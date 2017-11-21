@@ -24,4 +24,5 @@ class loginTest():
         login.user_logIn(self.driver,username,password)
         self.driver.quit()
 loginTest().test__admin__login()
+loginTest().test__guest__login()
 
