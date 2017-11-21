@@ -1,5 +1,5 @@
 class login():
-    #登录
+    #登录,修改接口需要驱动、用户名和密码等参数
     def user_logIn(self,driver,username,password):
         driver.find_element_by_id("shortAccount").clear()
         driver.find_element_by_id("shortAccount").send_keys(username)
