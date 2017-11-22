@@ -2,7 +2,7 @@ from selenium import webdriver
 from testSelenium.public import login#public是登录、退出的脚本
 
 class loginTest():
-    #主方法更改，哈哈
+    #主方法
     def __init__(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
