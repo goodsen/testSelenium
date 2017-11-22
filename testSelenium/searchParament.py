@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+#针对搜索参数化
 search_text = ['python','中文','text']
 for text in search_text:
     driver = webdriver.Firefox()
