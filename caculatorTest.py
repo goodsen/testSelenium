@@ -2,7 +2,7 @@ from caculator import Count
 import unittest
 #测试两个整数相加
 class TestCount(unittest.TestCase):
-    #定义启动
+    #定义启动项
     def setUp(self):
         print("test start")
     #定义测试用例1
