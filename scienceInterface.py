@@ -5,6 +5,7 @@ import unittest
 class scienceInterface(unittest.TestCase):
     #定义启动方法
     def setUp(self):
+        print("开始测试")
         self.url = ""
     def test_get_event_null(self):
         r = requests.get(self.url,params={'key':'value'})
