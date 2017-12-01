@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
 
     #定义报告存放路径
-    fp = "E:\\result.html"
+    fp = "E:\\tes.html"
     fp_result = open(fp ,"wb")
 
     #定义测试报告
