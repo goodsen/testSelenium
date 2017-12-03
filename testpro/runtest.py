@@ -1,8 +1,8 @@
+#!/usr/bin/env python
 import unittest
-
-#加载测试文件
 from testpro import testadd
 from testpro import testsub
+
 
 #构造测试集
 suite = unittest.TestSuite()
