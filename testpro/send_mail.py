@@ -3,15 +3,15 @@ from email.mime.text import MIMEText
 from email.utils import formataddr
 
 my_sender='1281198374@qq.com'#发件人邮箱账号
-my_pass='awcexpleufuahfhf'#发件人邮箱密码
+my_pass='vhmgggamjmtkhfhe'#发件人邮箱密码
 my_user='1281198374@qq.com'#收件人为自己
 def mail():
     ret=True
     try:
-        msg=MIMEText('是否可以正常收到短信邮件\n先用python脚本尝试一下','plain','utf-8')
+        msg=MIMEText('<html><h1>您好！</h1></html>','html','utf-8')
         msg['From']=formataddr(["goodsen",my_sender])#括号里的对应发件人邮箱昵称，发件人邮箱账号
         msg['To']=formataddr(["hadey",my_user])#括号里的对应收件人邮箱昵称、收件人邮箱账号
-        msg['Subject']="goodsen发送邮件测试"#邮件的主题,也可以说是标题
+        msg['Subject']="自动化测试"#邮件的主题,也可以说是标题
 
         server=smtplib.SMTP_SSL("smtp.qq.com",465)#发件人邮箱中的SMTP服务器，端口是25
         server.login(my_sender,my_pass)#这是对应的发件人邮箱账号、邮箱密码
