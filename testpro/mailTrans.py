@@ -42,4 +42,4 @@ if __name__ == '__main__':
     fp.close()
 
     new_report = new_report(test_report)
-    send_mail(new_report)
+    mailS(new_report)
