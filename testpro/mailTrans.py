@@ -5,20 +5,22 @@ import smtplib,unittest,time,os
 
 #===============定义发送邮件==================
 def mailS(file_new):
-    f = open(file_new,'rb')
-    mail_body = f.read()
-    f.close()
 
-    msg = MIMEText(mail_body,'html','utf-8')
-    msg['Subject'] = Header("自动化测试报告",'utf-8')
+        f = open(file_new,'rb')
+        mail_body = f.read()
+        f.close()
 
-    # 连接qq邮件服务器
-    smtp = smtplib.SMTP_SSL("smtp.qq.com",465)
-    smtp.login("1281198374@qq.com",
+        msg = MIMEText(mail_body,'html','utf-8')
+        msg['Subject'] = Header("自动化测试报告",'utf-8')
+
+
+        # 连接qq邮件服务器
+        smtp = smtplib.SMTP_SSL("smtp.qq.com",465)
+        smtp.login("1281198374@qq.com",
                "vhmgggamjmtkhfhe")
-    smtp.sendmail("1281198374@qq.com","1281198374@qq.com",msg.as_string())
-    smtp.quit()
-    print('email has send out!')
+        smtp.sendmail("1281198374@qq.com","1281198374@qq.com",msg.as_string())
+        smtp.quit()
+        print("邮件已发送！")
 #===========查找测试报告目录，找到最新生成的测试报告文件======
 def new_report(testreport):
     lists = os.listdir(testreport)
