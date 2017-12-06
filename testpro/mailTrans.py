@@ -12,8 +12,8 @@ def mailS(file_new):
     msg = MIMEText(mail_body,'html','utf-8')
     msg['Subject'] = Header("自动化测试报告",'utf-8')
 
-    smtp = smtplib.SMTP()
-    smtp.connect("smtp.qq.com")
+    # 连接qq邮件服务器
+    smtp = smtplib.SMTP_SSL("smtp.qq.com",465)
     smtp.login("1281198374@qq.com",
                "vhmgggamjmtkhfhe")
     smtp.sendmail("1281198374@qq.com","1281198374@qq.com",msg.as_string())
@@ -28,7 +28,7 @@ def new_report(testreport):
     return file_new
 if __name__ == '__main__':
     test_dir = 'C:\\Users\\gh\\PycharmProjects\\testSelenium\\testpro\\'
-    test_report = 'C:\\Users\\gh\\PycharmProjects\\testSelenium\\testpro\\test.html'
+    test_report = 'C:\\Users\\gh\\PycharmProjects\\testSelenium\\testpro\\'
 
     discover = unittest.defaultTestLoader.discover(test_dir,
                                                    pattern='test_*.py')
